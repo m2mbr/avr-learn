@@ -1,6 +1,8 @@
 PROG=pro
 DF_CPU=16000000
 MMCU=atmega328p
+DRIVER=tty.usbmodemfa131
+#DRIVER=ttyACM0 
 
 hex:
 	avr-g++ -Os -DF_CPU=$(DF_CPU) -mmcu=$(MMCU) -c $(PROG).cc
@@ -10,4 +12,4 @@ hex:
 	rm $(PROG).elf
 
 flash:
-	avrdude  -c arduino -p $(MMCU) -P /dev/ttyACM0 -U flash:w:$(PROG).hex
+	avrdude  -c arduino -p $(MMCU) -P /dev/$(DRIVER) -U flash:w:$(PROG).hex

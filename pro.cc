@@ -11,9 +11,9 @@ int main(void){
 
     for(;;){
 
-        for(j=0; j<100; j++){
+        for(j=0; j<150; j++){
             for(k=0; k<255; k++){
-                for(i=0; i<100; i++)
+                for(i=0; i<150; i++)
                 {
                     if(i < j){
                         PORTB |= 1 << PCINT5;
