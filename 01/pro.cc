@@ -8,13 +8,13 @@ int main(void){
     unsigned int k;
 
     DDRB = 0xFF;
-    PORTB |= 1 << PCINT5;
+    PORTB = 0x00;
 
     for(;;){
 
-        for(j=0; j<50; j++){
+        for(j=0; j<100; j++){
             for(k=0; k<255; k++){
-                for(i=0; i<50; i++)
+                for(i=0; i<100; i++)
                 {
                     if(i < j){
                         PORTB |= 1 << PCINT5;
@@ -25,9 +25,9 @@ int main(void){
             }            
         }
 
-        for(j=0;j<50;j++){
+        for(j=0;j<100;j++){
             for(k=0;k<255;k++){
-                for(i=50;i>0;i--){
+                for(i=100;i>0;i--){
                     if(i>j){
                         PORTB |= 1 << PCINT5;
                     }
