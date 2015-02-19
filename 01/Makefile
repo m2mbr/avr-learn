@@ -1,4 +1,4 @@
-PROG=pro
+PROG=main
 DF_CPU=16000000
 MMCU=atmega328p
 DRIVER=tty.usbmodemfa131
