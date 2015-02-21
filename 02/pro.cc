@@ -6,7 +6,8 @@
 #define TIMER_CLOCK     2
 
 int main(void){
-    
+    DDRB = 0xFF;
+    PORTB = _BV(PB5);
     DDRD = _BV(PD5); // set OC1A pin as output, required for output 
     TCCR1A = _BV(COM1A0); // enable toggle OC1A output on compare 
     TCCR1B = _BV(CS10) | _BV(CS11)  | _BV(WGM12); // prescaler=64, clear timer/counter on compareA match                
