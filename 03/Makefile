@@ -1,6 +1,6 @@
 PROG=main
 DF_CPU=16000000
-MMCU=atmega328p
+MMCU=atmega8
 DRIVER=tty.usbmodemfa131
 #DRIVER=ttyACM0 
 
